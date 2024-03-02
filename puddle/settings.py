@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damp-citadel-88129-d783b4e1f0b0.herokuapp.com']
                   
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
