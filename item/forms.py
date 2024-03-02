@@ -24,10 +24,14 @@ class NewItemForm(forms.ModelForm):
             }),
             'image': forms.FileInput(attrs={
                 'class': INPUT_CLASSES
-            })
+            }),
         }
 
 class EditItemForm(forms.ModelForm):
+    is_sold = forms.BooleanField(
+        widget=forms.RadioSelect(choices=[(True, 'yes'), (False, 'no')])
+    )
+
     class Meta:
         model = Item
         fields = ('name', 'description', 'price', 'image', 'is_sold')
@@ -43,5 +47,5 @@ class EditItemForm(forms.ModelForm):
             }),
             'image': forms.FileInput(attrs={
                 'class': INPUT_CLASSES
-            })
+            }),
         }

@@ -3,12 +3,12 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h1 class="bold-text mb-6 text-5xl">{{ title }}</h1>
+<h1 class="bold-text mb-6 text-6xl">{{ title }}</h1>
 
 <form method="post" action="." enctype="multipart/form-data">
     {% csrf_token %}
 
-    <div class="space-y-4">
+    <div class="space-y-4 text-3xl">
         {{ form.as_p }}
     </div>
 
