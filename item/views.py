@@ -33,6 +33,14 @@ def detail(request, pk):
         'related_items': related_items
     })
 
+def same_category(request,pk):
+    category = get_object_or_404(Category, pk=pk)
+    items = Item.objects.filter(category=category)
+    return render(request, 'item/same_category.html', {
+        'items': items,
+        'category':category
+    })
+    
 @login_required
 def new(request):
     if request.method == 'POST':
