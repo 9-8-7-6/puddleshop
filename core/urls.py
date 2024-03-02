@@ -5,7 +5,7 @@ from . import views
 from .forms import LoginForm
 
 app_name = 'core'
-
+ 
 urlpatterns = [
     path('', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
