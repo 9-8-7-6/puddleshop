@@ -31,7 +31,9 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://damp-citadel-88129-d783b4e1f0b0.herokuapp.com/'
+]
 # Application definition
 
 INSTALLED_APPS = [
