@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
-
+from django.contrib.auth import logout as auth_logout
 from item.models import Category, Item
-
+from django.contrib import messages 
 from .forms import SignupForm
 
 def index(request):
@@ -12,8 +12,12 @@ def index(request):
         'categories': categories,
         'items': items,
     })
+    
 def contact(request):
     return render(request, 'core/contact.html')
+
+def about(request):
+    return render(request, 'core/about.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -30,3 +34,8 @@ def signup(request):
     return render(request, 'core/signup.html',{
          'form': form
     })
+
+def logout(request):
+	auth_logout(request)
+	messages.success(request,('Youre now logged out'))
+	return redirect('/')

@@ -4,18 +4,18 @@
 
 {% block content %}
 <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
-    <h1 class="mb-6 text-3xl">Log in</h1>
+    <h1 class="mb-6 text-6xl text-center">Log in</h1>
 
     <form method="post" action=".">
         {% csrf_token %}
 
         <div class="mb-3">
-            <label class="inline-block mb-2">Username</label><br>
+            <label class="inline-block text-2xl mb-2">Username</label><br>
             {{ form.username }}
         </div>
 
         <div class="mb-3">
-            <label class="inline-block mb-2">Password</label><br>
+            <label class="inline-block text-2xl mb-2">Password</label><br>
             {{ form.password }}
         </div>
 
@@ -28,8 +28,9 @@
                 {{ form.non_field_errors }}
             </div>
         {% endif %}
-
-        <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Submit</button>
+        <div class="text-center">
+            <button class="w-1/4 mx-auto py-4 px-8 text-5xl bg-red-600 hover:bg-red-900 rounded-xl text-white">Submit</button>
+        </div>    
     </form>
 </div>
 {% endblock %}
