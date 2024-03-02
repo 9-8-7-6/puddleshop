@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-3&gt67evacw-!nd$w*&8n#_zdi@38jo47y(vjya!m*bmmz-pdq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -32,7 +32,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://damp-citadel-88129-d783b4e1f0b0.herokuapp.com/'
+    'https://damp-citadel-88129-d783b4e1f0b0.herokuapp.com',
 ]
 # Application definition
 
