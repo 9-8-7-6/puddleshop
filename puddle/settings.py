@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3&gt67evacw-!nd$w*&8n#_zdi@38jo47y(vjya!m*bmmz-pdq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['damp-citadel-88129-d783b4e1f0b0.herokuapp.com']
+ALLOWED_HOSTS = ['damp-citadel-88129-d783b4e1f0b0.herokuapp.com','127.0.0.1']
                   
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
