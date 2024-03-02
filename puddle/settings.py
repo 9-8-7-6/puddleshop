@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3&gt67evacw-!nd$w*&8n#_zdi@38jo47y(vjya!m*bmmz-pdq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['damp-citadel-88129-d783b4e1f0b0.herokuapp.com']
+ALLOWED_HOSTS = []
                   
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
