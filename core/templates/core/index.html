@@ -46,7 +46,7 @@
     </div>
     
 
-    <script>
+    {% comment %} <script>
         var page = 1;
         function loadMoreItems() {
             var url = "{% url 'core:load_more_items' %}?page=" + page;
@@ -68,5 +68,5 @@
                 loadMoreItems();
             }
         });
-    </script>        
+    </script>         {% endcomment %}
 {% endblock %}
