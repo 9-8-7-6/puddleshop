@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import NewItemForm, EditItemForm
 from .models import Category, Item
 
+
 def items(request):
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', 0)
@@ -36,6 +37,7 @@ def detail(request, pk):
 def same_category(request,pk):
     category = get_object_or_404(Category, pk=pk)
     items = Item.objects.filter(category=category)
+    
     return render(request, 'item/same_category.html', {
         'items': items,
         'category':category

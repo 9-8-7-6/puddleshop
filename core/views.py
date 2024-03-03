@@ -4,6 +4,10 @@ from item.models import Category, Item
 from django.contrib import messages 
 from .forms import SignupForm
 
+
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+
 def index(request):
     items = Item.objects.filter(is_sold=False)[0:12]
     categories = Category.objects.all()
@@ -39,3 +43,9 @@ def logout(request):
 	auth_logout(request)
 	messages.success(request,('Youre now logged out'))
 	return redirect('/')
+
+def load_more_items(request):
+    page = int(request.GET.get('page', 1))
+    items = Item.objects.filter(is_sold=False)[(page) * 12:(page+1) * 12]
+    html = render_to_string('core/item_list.html', {'items': items})
+    return JsonResponse({'html': html})
