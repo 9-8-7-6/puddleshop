@@ -3,5 +3,22 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-    <h1>The contact page</h1>
+    <style>
+    .email-link {
+        background-color: #FFB6C1;
+        padding: 10px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+    .email-link:hover {
+        background-color: #CD5C5C;
+    }
+    </style>
+    
+    <center class = 'text-5xl'><h1>The contact page</h1></center>
+    <center>
+        <div class="email-link">
+            <a class='text-6xl' href="mailto:ac1246897@gmail.com?subject=Subject%20of%20the%20Email&body=Body%20of%20the%20Email"><b>Send Email</a>
+        </div>
+    </center>
 {% endblock %}

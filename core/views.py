@@ -44,6 +44,12 @@ def logout(request):
 	messages.success(request,('Youre now logged out'))
 	return redirect('/')
 
+def policy(request):
+    return render(request, 'core/policy.html')
+
+def termofuse(request):
+    return render(request, 'core/termofuse.html')
+
 # def load_more_items(request):
 #     page = int(request.GET.get('page', 1))
 #     items = Item.objects.filter(is_sold=False)[(page) * 12:(page+1) * 12]
