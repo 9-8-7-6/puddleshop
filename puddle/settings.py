@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
+    'rest_framework',
     'conversation',
     'cart',
     'core',
@@ -117,8 +118,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
+REST_FRAMWORK = {
+        'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 
 LANGUAGE_CODE = 'en-us'
 
