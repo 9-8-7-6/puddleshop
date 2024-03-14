@@ -5,10 +5,12 @@ certifi==2024.2.2
 click==8.1.7
 distlib==0.3.8
 dj-database-url==2.1.0
-Django==5.0.2
+Django==5.0.2 
 django-configurations==2.5
 django-heroku==0.3.1
+djangorestframework==3.14.0
 environ==1.0
+exceptiongroup==1.2.0
 filelock==3.13.1
 Flask==3.0.2
 gunicorn==21.2.0
@@ -24,8 +26,9 @@ pluggy==1.4.0
 psycopg2==2.9.9
 psycopg2-binary==2.9.9
 pytest==8.0.2
-setuptools==69.1.0
+pytz==2024.1
 sqlparse==0.4.4
+tomli==2.0.1
 typing_extensions==4.10.0
 virtualenv==20.25.1
 Werkzeug==3.0.1
