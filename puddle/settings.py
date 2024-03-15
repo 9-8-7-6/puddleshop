@@ -38,6 +38,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGINS = []
+# 目前不允許
 
 CORS_ALLOW_METHODS = (
     "GET",
