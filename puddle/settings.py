@@ -36,6 +36,16 @@ LOGOUT_REDIRECT_URL = '/'
 CSRF_TRUSTED_ORIGINS = [
     'https://damp-citadel-88129-d783b4e1f0b0.herokuapp.com',
 ]
+
+CORS_ALLOWED_ORIGINS = []
+
+CORS_ALLOW_METHODS = (
+    "GET",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,10 +62,13 @@ INSTALLED_APPS = [
     'core',
     'myitem',
     'item',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
